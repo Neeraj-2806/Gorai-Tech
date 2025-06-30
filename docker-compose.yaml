@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: nodeapp
+    restart: always
+    ports:
+      - "80:3000"
+    environment:
+      DB_HOST: db
+      DB_NAME: userdb
+      DB_USER: root
+      DB_PASS: Neeraj123
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Neeraj123
+      MYSQL_DATABASE: userdb
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
