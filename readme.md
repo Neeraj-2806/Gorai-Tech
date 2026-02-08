@@ -1,2 +1,2 @@
-Added nginx configuration
+Added nginx configurationsss
 hello
