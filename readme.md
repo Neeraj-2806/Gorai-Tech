@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-Added nginx configurationss
+Added nginx configurationsssssssss
 =======
 Added nginx configurations
 >>>>>>> feature/test-conflict
